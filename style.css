@@ -1,0 +1,122 @@
+/* whole background = your drawing */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  background-image: url("https://github.com/rmbamba2029/yes.io/blob/2b902261236c3f11f16e6366aae40292c569abb2/Untitled26_20260216095937.png"); /* your file name */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* score + timer */
+.hud {
+  position: fixed;
+  top: 18px;             /* a bit lower from the very top */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 20px;
+  color: #2f5d3a;
+}
+
+/* order plate area – lined up with the white floating plate */
+.order-spot {
+  width: 100%;
+  margin-top: 120px;      /* move plate down or up if needed */
+  display: flex;
+  justify-content: center;
+}
+
+.order-circle {
+  width: 260px;           /* a bit larger to match circle */
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0); /* transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.order-circle.correct {
+  background: rgba(138, 217, 77, 0.55);
+}
+
+.order-circle img {
+  width: 190px;
+  height: auto;
+}
+
+/* ingredient row aligned over the 5 small rectangles */
+.ingredients-row {
+  position: fixed;
+  bottom: 90px;            /* sits on top of the 5 trays */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;               /* spacing between trays – tuned for image */
+}
+
+/* invisible buttons */
+.ingredient {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.ingredient img {
+  width: 105px;            /* close to tray width */
+  height: auto;
+}
+
+/* highlight selected */
+.ingredient.selected {
+  box-shadow: 0 0 0 3px #2f5d3a;
+  transform: translateY(-4px);
+}
+
+/* clear / check buttons under ingredients */
+.controls {
+  position: fixed;
+  bottom: 26px;            /* just below the trays */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+button.clear-btn,
+button.check-btn {
+  padding: 8px 22px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background: #f07f7f;
+  color: #fff;
+}
+
+.check-btn {
+  background: #5bb05b;
+  color: #fff;
+}
+
+/* message above the ingredient row */
+.message {
+  position: fixed;
+  bottom: 150px;           /* between board and trays */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #3c6446;
+  min-height: 24px;
+}

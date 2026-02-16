@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sashimi Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hud">
+    <div id="score">Score: 0</div>
+    <div id="timer">Time: 60</div>
+  </div>
+
+  <!-- top order plate (white circle in your drawing) -->
+  <div class="order-spot">
+    <div id="orderCircle" class="order-circle">
+      <img id="orderImage" src="IMAGE_ORDER_SALMON" alt="order">
+    </div>
+  </div>
+
+  <!-- ingredient buttons lined up with the bottom rectangles -->
+  <div class="ingredients-row">
+    <!-- 1: wasabi (green blob) -->
+    <button class="ingredient" data-type="none" data-side="wasabi">
+      <img src="IMAGE_WASABI" alt="wasabi">
+    </button>
+
+    <!-- 2: salmon sashimi (orange slices) -->
+    <button class="ingredient" data-type="salmon" data-side="none">
+      <img src="IMAGE_SALMON" alt="salmon sashimi">
+    </button>
+
+    <!-- 3: tuna sashimi (pink slices) -->
+    <button class="ingredient" data-type="tuna" data-side="none">
+      <img src="IMAGE_TUNA" alt="tuna sashimi">
+    </button>
+
+    <!-- 4: yellowtail sashimi (pale/white slices) -->
+    <button class="ingredient" data-type="yellowtail" data-side="none">
+      <img src="IMAGE_YELLOWTAIL" alt="yellowtail sashimi">
+    </button>
+
+    <!-- 5: red flakes (pink shredded pile) -->
+    <button class="ingredient" data-type="none" data-side="red">
+      <img src="IMAGE_RED_FLAKES" alt="red flakes">
+    </button>
+  </div>
+
+  <div class="controls">
+    <button id="clearBtn" class="clear-btn">Clear</button>
+    <button id="checkBtn" class="check-btn">Check</button>
+  </div>
+
+  <p id="message" class="message"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
